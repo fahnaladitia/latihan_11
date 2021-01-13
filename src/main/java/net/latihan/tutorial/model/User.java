@@ -12,8 +12,6 @@ import java.util.Set;
 @Table(name = "users")
 public class User {
 
-    String name;
-
     @Id
     @Column(name = "user_id")
     @GeneratedValue(strategy = GenerationType.IDENTITY)
@@ -80,13 +78,5 @@ public class User {
 
     public void setRoles(Set<Role> roles) {
         this.roles = roles;
-    }
-
-    public String getName() {
-        return name;
-    }
-
-    public void setName(String name) {
-        this.name = name;
     }
 }
